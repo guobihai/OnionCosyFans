@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="105dp"
+    android:background="@color/white"
+    android:layout_height="155dp">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_item"
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+
+            <ImageView
+                android:id="@+id/img_item_icon"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:scaleType="center"
+                android:src="@mipmap/home_item_detail" />
+
+            <TextView
+
+                android:id="@+id/tv_discc_monery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_item_special_shaper"
+                android:paddingLeft="3dp"
+                android:paddingTop="2dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:text="RM169.4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_font_size_12"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_monery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_item"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="RM169.4"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_13" />
+
+
+        <TextView
+            android:id="@+id/tv_monery2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_monery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="RM169.4"
+            android:textColor="@color/text_sub_dark"
+            android:textSize="@dimen/base_font_size_10"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_alignParentRight="true"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/line"
+        />
+
+</RelativeLayout>
+
+
+

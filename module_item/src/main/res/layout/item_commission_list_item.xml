@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_commission_left"
+        android:layout_width="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/base_font_size_13"
+        android:textColor="@color/text"
+        android:text="Min.Spend.RM299"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_toRightOf="@+id/tv_commission_left"
+        android:id="@+id/tv_commission_right"
+        android:layout_width="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/base_font_size_13"
+        android:textColor="@color/bluce"
+        android:text="RM299"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

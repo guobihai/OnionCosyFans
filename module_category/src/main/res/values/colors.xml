@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="categorie_item_bg">#F1F2F4</color>
+    <color name="categorie_text_focus">#5363FF</color>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:paddingLeft="10dp"
+        android:id="@+id/layout_select"
+        android:layout_width="40dp"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/img_select"
+            style="@style/CartCicleStyle"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_cart_cicle"
+            />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:textSize="@dimen/base_font_size_13"
+        android:text="ttt"
+        android:layout_width="match_parent"
+        android:textColor="@color/text"
+        android:gravity="left|center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

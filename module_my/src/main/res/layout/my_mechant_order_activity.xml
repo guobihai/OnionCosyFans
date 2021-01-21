@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.my.viewdModel.MySaleOrderViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:divider="@drawable/my_center_line"
+        app:showDividers="middle"
+        tools:context="cc.onion.cosyfans.my.activity.merchants.MySalesOrderActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/tv_search"
+                android:layout_toRightOf="@+id/img_left"
+                android:background="@drawable/base_searchbar_drawable">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableStart="@mipmap/icon_search_magnifying_glass"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.searchText}"
+                    android:textColor="@color/text"
+                    android:textColorHint="#BFBFBF"
+                    android:textSize="14sp" />
+
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{v->viewModel.deleteSearchWord()}"
+                    android:visibility="@{viewModel.showDelete?View.VISIBLE:View.GONE}">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_delete" />
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/my_search_text"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/my_center_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/bluce"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="-1dp"
+            app:tabPaddingStart="-1dp"
+            app:tabSelectedTextColor="@color/bluce"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/smartRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlAccentColor="@color/text"
+                app:srlPrimaryColor="@color/body">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/my_order_recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/my_center_line"
+                    android:padding="10dp" />
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <ImageView
+                android:id="@+id/floatbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/home_top"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+</layout>

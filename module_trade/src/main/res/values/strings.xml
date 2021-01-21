@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="trade_commit_order">提交订单</string>
+    <string name="trade_order_total_monery">订单总额：</string>
+    <string name="trade_cash_coupons">现金卷</string>
+    <string name="trade_available">张可用</string>
+    <string name="trade_coupon">优惠券</string>
+    <string name="trade_Order_subtotal">订单小计</string>
+    <string name="trade_Promotion_discount">促销立减</string>
+    <string name="trade_freight">运费</string>
+    <string name="trade_address">请先添加地址</string>
+    <string name="trade_play_type">请选择支付方式</string>
+    <string name="trade_no_play">暂无支付信息，请稍后重试</string>
+    <string name="trade_play_result">支付成功</string>
+    <string name="trade_play_error">支付失败</string>
+    <string name="trade_see_order">查看订单</string>
+    <string name="trade_back_home">回到主页</string>
+    <string name="trade_coundown_time">倒计时</string>
+    <string name="trade_order_amount">订单金额:</string>
+    <string name="trade_order_success">支付成功</string>
+    <string name="trade_order_error">支付失败</string>
+</resources>

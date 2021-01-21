@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/my_item_product_bg"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:divider="@drawable/my_center_line"
+    app:showDividers="middle">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvShowOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_product_order_no"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvShowOrderNoValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="0000"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/tvShowOrderNo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvShowOrderNoStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="已完成"
+            android:textColor="@color/text_sub_dark"
+            android:textSize="@dimen/base_font_size_13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llOrderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvProductCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_product_count_num"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_13"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductCountValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_13"
+                app:layout_constraintLeft_toRightOf="@+id/tvProductCount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_show_more_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/icon_filter_arrow_uncheck"
+                app:layout_constraintLeft_toRightOf="@+id/tvProductCountValue"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductMoneyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/my_product_all_money"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@+id/tvProductMoneyType"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductMoneyType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/my_monye_type"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@+id/tvProductMoney"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0.00"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_order_consigne"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_12" />
+
+        <TextView
+            android:id="@+id/tvConsigne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llcheckOrderIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_order_income"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:background="@drawable/my_save_btn_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/my_order_income"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/base_font_size_12" />
+
+        <Button
+            android:id="@+id/btn_order_tracking"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/my_btn_tracking_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/my_order_traking"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_12" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_time_layout"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_time_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_check_agreen" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/my_center_line" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tracking_address_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_tracking_company_name"
+            android:textColor="@color/bluce"
+            android:textSize="@dimen/base_font_size_13"
+            app:layout_constraintLeft_toRightOf="@+id/ll_time_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tracking_time_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/my_tracking_company_name"
+            android:textColor="@color/text_sub"
+            android:textSize="@dimen/base_font_size_11"
+            app:layout_constraintLeft_toRightOf="@+id/ll_time_layout"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tracking_address_value" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@mipmap/icon_home_main"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/nav_categorie"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@mipmap/icon_home_categorie"
+        android:title="分类" />
+
+    <item
+        android:id="@+id/nav_posts"
+        android:enabled="true"
+        android:icon="@mipmap/icon_home_posts"
+        android:title="素材" />
+
+    <item
+        android:id="@+id/nav_carts"
+        android:enabled="true"
+        android:icon="@mipmap/icon_home_cart"
+        android:title="购物车"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/nav_mycosy"
+        android:enabled="true"
+        android:icon="@mipmap/icon_home_mycosy"
+        android:title="我的" />
+
+</menu>

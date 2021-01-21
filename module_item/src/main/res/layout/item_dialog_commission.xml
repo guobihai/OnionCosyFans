@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_conpon_bg_shape"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="销售可得RM20"
+            android:textStyle="bold"
+            android:textColor="@color/bluce"
+            android:padding="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/base_font_size_16" />
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_cancle"
+            android:paddingRight="15dp"
+           android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_conpon_recyclerview"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        style="@style/BaseAppLineStyle"
+        />
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_share"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/base_font_size_13" />
+
+
+    <LinearLayout
+        android:paddingTop="30dp"
+        android:paddingBottom="40dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/btn_commisson_copy"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@mipmap/icon_cancle"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/item_copy"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/btn_commisson_share"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawableTop="@mipmap/icon_cancle"
+            android:text="@string/item_shares"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

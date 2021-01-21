@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.passport.SigninWithLoginViewModel" />
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_bar_height">
+
+            <ImageView
+                android:id="@+id/img_return"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:src="@mipmap/icon_left" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/base_font_size_16"
+                android:textColor="@color/text"
+                android:text="@string/passport_login"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_app" />
+
+
+        <com.deadline.statebutton.StateButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="@{v->model.submit()}"
+            android:text="@string/passport_account_login"
+            android:textSize="@dimen/base_font_size_15"
+            app:normalBackgroundColor="#8C46FF"
+            app:normalTextColor="@color/white"
+            app:pressedBackgroundColor="#8C46FF"
+            app:pressedTextColor="@color/white"
+            app:radius="100dp"
+            app:unableBackgroundColor="#5064FF"
+            app:unableTextColor="@color/white" />
+
+        <com.deadline.statebutton.StateButton
+            android:id="@+id/btn_sign"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="@{v->model.register()}"
+            android:text="@string/passport_reigist"
+            android:textSize="@dimen/base_font_size_15"
+            app:normalBackgroundColor="#F1F2F4"
+            app:normalTextColor="@color/text_sub_dark"
+            app:pressedBackgroundColor="#F1F2F4"
+            app:pressedTextColor="@color/text_sub_dark"
+            app:radius="100dp"
+            app:unableBackgroundColor="#F1F2F4"
+            app:unableTextColor="@color/text_sub_dark" />
+
+        <TextView
+            android:layout_marginTop="73dp"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/base_font_size_13"
+            android:textColor="@color/text"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/passport_quick"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/layout_other_login"
+            android:layout_marginTop="40dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:drawableTop="@mipmap/facebook"
+                android:text="FaceBook"
+                android:textColor="@color/text_sub_dark"
+                android:textSize="@dimen/base_font_size_10"
+                android:layout_marginRight="30dp"
+                android:drawablePadding="5dp"
+                android:onClick="@{v->model.fackbookLogin()}"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:drawableTop="@mipmap/google"
+                android:text="Google"
+                android:textColor="@color/text_sub_dark"
+                android:drawablePadding="5dp"
+                android:onClick="@{v->model.googleLogin()}"
+                android:textSize="@dimen/base_font_size_10"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/layout_flexbox"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:flexWrap="wrap">
+
+
+                <TextView
+
+                    android:id="@+id/tv_user_aggren"
+                    style="@style/PassportNoticeText"
+                    android:text="@string/passport_tips"
+                    />
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tv_user_protocol"
+                    style="@style/PassportNoticeText"
+                    android:text="@string/passport_password_user_agreement"
+                    />
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

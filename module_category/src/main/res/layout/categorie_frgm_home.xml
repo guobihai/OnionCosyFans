@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.categorie.viewModel.CategorieViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/body"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        android:orientation="vertical">
+
+
+        <!--标题-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/contacts_app_bar_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/base_0dp">
+
+            <View
+                android:id="@+id/contacts_status_bar_compat"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/contacts_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                app:theme="@style/Toolbar.Nav"
+                app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                <TextView
+                    android:id="@+id/contacts_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="8dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/toolbar_title_size"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <RelativeLayout
+
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            >
+
+
+            <LinearLayout
+                android:onClick="@{v->viewModel.toSearch()}"
+                android:layout_marginRight="@dimen/base_margin"
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/base_searchbar_drawable"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:background="@color/transparent"
+                    android:hint="Search"
+                    android:maxLength="15"
+                    android:drawableLeft="@mipmap/icon_search_magnifying_glass"
+                    android:singleLine="true"
+                    android:drawablePadding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@={viewModel.searchText}"
+                    android:textColor="@color/text"
+                    android:textColorHint="#BFBFBF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            background="#F1F2F4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_cate_left_list"
+            android:layout_width="90dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/body"
+            android:scrollbars="none"
+            android:paddingRight="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:layout_height="match_parent"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_toRightOf="@+id/rl_cate_left_list"
+            android:id="@+id/rl_cate_right_grid"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/base_padding"
+            android:paddingRight="5dp"
+            android:background="@color/white"
+            android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

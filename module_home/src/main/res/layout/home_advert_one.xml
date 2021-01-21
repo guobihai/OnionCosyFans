@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="advertOne"
+            type="cc.onion.cosyfans.home.viewmodel.HomeViewModel" />
+    </data>
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/home_advert_one"
+        android:layout_width="match_parent"
+        android:src="@mipmap/home_advert_one"
+        android:scaleType="fitCenter"
+        android:layout_height="112dp">
+
+    </ImageView>
+
+</layout>

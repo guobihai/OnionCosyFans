@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.cart.CartActivityViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:id="@+id/body"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp"
+            android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        >
+
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:src="@mipmap/icon_left"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="center"
+            android:layout_height="60dp"/>
+
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/tv_search"
+            android:layout_toRightOf="@+id/img_left"
+            android:layout_marginRight="@dimen/base_margin"
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/base_searchbar_drawable"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:hint="在活动商品中搜素"
+                android:maxLength="15"
+                android:text="@={model.searchWord}"
+                android:drawableLeft="@mipmap/icon_search_magnifying_glass"
+                android:singleLine="true"
+                android:drawablePadding="10dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text"
+                android:textColorHint="#BFBFBF"
+                android:textSize="@dimen/base_font_size_13" />
+
+            <ImageView
+                android:onClick="@{v->model.deleteSearchWord()}"
+                android:visibility="@{model.isShowDeleteView?View.VISIBLE:View.GONE}"
+                android:id="@+id/img_delete"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/delete_search"
+                android:layout_height="35dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tv_search"
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:text="搜索"
+            android:onClick="@{v->model.searchWord()}"
+            android:textColor="@color/text"
+            android:textSize="@dimen/base_font_size_14"
+            android:layout_height="35dp"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:background="@color/body"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@={model.pormotion}"
+                android:textColor="@color/orange"
+                android:background="#FFE8DF"
+                android:textSize="@dimen/base_font_size_13"
+                android:paddingLeft="@dimen/base_padding"
+                android:paddingRight="@dimen/base_padding"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@={model.time}"
+                android:background="#FFE8DF"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_13"
+                android:paddingLeft="@dimen/base_padding"
+                android:paddingRight="@dimen/base_padding"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/pop_cart_refreshLayout"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lv_cart_recyclerview"
+                    android:background="@color/base_bg"
+                    android:paddingLeft="5dp"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/layout_base"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/img_top"
+                        android:scaleType="fitCenter"
+                        android:layout_width="60dp"
+                        android:background="@null"
+                        android:visibility="visible"
+                        android:src="@mipmap/home_top"
+                        android:layout_height="60dp"/>
+
+                </RelativeLayout>
+
+
+                <include
+                    android:visibility="@{model.isShowBaseView?View.VISIBLE:View.GONE}"
+                android:id="@+id/layout_layout1"
+                app:popModel="@{model}"
+                layout="@layout/cart_include_pop_checkout" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>

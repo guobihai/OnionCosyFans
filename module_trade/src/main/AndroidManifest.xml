@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.onion.cosyfans.module_trade">
+
+    <application>
+
+
+        <activity
+            android:name=".TradeAcivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ConsyFansActivityTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.ipay.IPayIHActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".activity.PlayResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ConsyFansActivityTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
+    </application>
+
+</manifest>

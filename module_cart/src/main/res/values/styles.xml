@@ -1,0 +1,11 @@
+<resources>
+
+
+
+<!--    购物车圈圈-->
+    <style name="CartCicleStyle">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+</resources>

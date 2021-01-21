@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data >
+
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.home.viewmodel.HomeViewModel" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#F1F2F4"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:gravity="top"
+            android:layout_gravity="top"
+            android:id="@+id/layout_home_title_bg"
+            android:layout_width="match_parent"
+            android:background="@color/theme"
+            android:paddingTop="20dp"
+            android:layout_height="70dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:onClick="@{v->viewModel.toQcCodeClick()}"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_home_scan"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/dp_10"
+                android:drawableTop="@mipmap/icon_scan"
+                android:paddingLeft="10dp"
+                android:text="scan"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_home_login"
+                android:layout_toRightOf="@+id/tv_home_scan"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/base_searchbar_drawable"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_location"
+                    android:background="@drawable/base_searchbar_left_drawable"
+                    />
+
+
+                <TextView
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Search"
+                    android:maxLength="15"
+                    android:onClick="@{v->viewModel.toSearchClick()}"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@={viewModel.searchText}"
+                    android:textColor="@color/text"
+                    android:textColorHint="#BFBFBF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_home_login"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/base_font_size_13"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_centerVertical="true"
+                android:text="Login"
+                android:onClick="@{v->viewModel.toLogin()}"
+                android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/used_house_refreshLayout"
+            android:layout_width="match_parent"
+            app:srlPrimaryColor="@color/theme"
+            app:srlAccentColor="@color/white"
+
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:overScrollMode="always"
+                android:scrollbarStyle="outsideInset"
+                android:fillViewport="true"
+                android:id="@+id/net_Scroview"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layout_base"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+
+
+                    <!--                布局一三个-->
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_fload_icon"
+                android:scaleType="fitCenter"
+                android:layout_width="80dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@null"
+                android:src="@mipmap/home_item_detail"
+                android:layout_height="80dp"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+                android:id="@+id/img_top"
+                android:scaleType="fitCenter"
+                android:layout_width="60dp"
+                android:background="@null"
+                android:visibility="gone"
+                android:src="@mipmap/home_top"
+                android:layout_height="60dp"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="OrderTabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_sub_dark</item>
+    </style>
+
+</resources>

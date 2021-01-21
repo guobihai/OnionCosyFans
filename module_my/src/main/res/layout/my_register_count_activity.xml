@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.my.viewdModel.RegisterCountViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/orange"
+                android:gravity="center"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:navigationIcon="@drawable/my_ic_chevron_left_white_24dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/my_register_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/base_font_size_16" />
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/selectSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/my_common_spinner_bg"
+                    android:dropDownVerticalOffset="35dp"
+                    android:spinnerMode="dropdown"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nel_NestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_colors"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/line_colors"
+                android:orientation="vertical"
+                app:divider="@drawable/my_center_line"
+                app:showDividers="middle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/line_colors"
+                    android:gravity="center|left"
+                    android:padding="@dimen/dp_10"
+                    android:text="Cosy Friend"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/base_font_size_15" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/my_register_item_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:divider="@drawable/my_center_line"
+                    app:showDividers="middle">
+
+                    <android.support.v7.widget.LinearLayoutCompat style="@style/my_register_LLCStyle">
+
+                        <LinearLayout style="@style/my_register_lllayout">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@string/my_item_register_user" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.registerUserCount}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/my_register_lllayout"
+                            android:layout_marginStart="1dp">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@string/my_item_purchase_user" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.billingCount}" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat style="@style/my_register_LLCStyle">
+
+                        <LinearLayout style="@style/my_register_lllayout">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@string/my_item_order_num" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.orderCount}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/my_register_lllayout"
+                            android:layout_marginStart="1dp">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@={viewModel.customerUnitPriceTitle}" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.customerUnitPrice}" />
+                        </LinearLayout>
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat style="@style/my_register_LLCStyle">
+
+                        <LinearLayout style="@style/my_register_lllayout">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@={viewModel.retailCountTitle}" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.retailCount}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/my_register_lllayout"
+                            android:layout_marginStart="1dp">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@={viewModel.totalEarningsTitle}" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.totalEarnings}" />
+                        </LinearLayout>
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat style="@style/my_register_LLCStyle">
+
+                        <LinearLayout style="@style/my_register_lllayout">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@={viewModel.refundCountTitle}" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.refundCount}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/my_register_lllayout"
+                            android:layout_marginStart="1dp">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@={viewModel.refundEarningsTitle}" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.refundEarnings}" />
+                        </LinearLayout>
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/line_colors"
+                    android:gravity="center|left"
+                    android:padding="@dimen/dp_10"
+                    android:text="@={viewModel.levelName}"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/base_font_size_15" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/my_register_LLCStyle"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/my_register_item_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10"
+                    app:divider="@drawable/my_center_line"
+                    app:showDividers="middle">
+
+                    <android.support.v7.widget.LinearLayoutCompat style="@style/my_register_LLCStyle">
+
+                        <LinearLayout style="@style/my_register_lllayout">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@string/my_item_direct_cd" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.directCd}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/my_register_lllayout"
+                            android:layout_marginStart="1dp">
+
+                            <TextView
+                                style="@style/my_register_textviewStyle"
+                                android:text="@string/my_item_indirect_cd" />
+
+                            <TextView
+                                style="@style/my_register_textviewValueStyle"
+                                android:text="@={viewModel.indirectCd}" />
+                        </LinearLayout>
+                    </android.support.v7.widget.LinearLayoutCompat>
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/tv_search"
+                        android:background="@drawable/base_searchbar_drawable">
+
+                        <EditText
+                            android:id="@+id/et_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@null"
+                            android:drawableStart="@mipmap/icon_search_magnifying_glass"
+                            android:drawablePadding="10dp"
+                            android:imeOptions="actionSearch"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:text="@={viewModel.searchText}"
+                            android:textColor="@color/text"
+                            android:textColorHint="#BFBFBF"
+                            android:textSize="14sp" />
+
+
+                        <FrameLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:onClick="@{v->viewModel.deleteSearchWord()}"
+                            android:visibility="@{viewModel.showDelete?View.VISIBLE:View.GONE}"
+                            android:layout_alignParentRight="true">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/icon_delete" />
+
+                        </FrameLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_search"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/my_search_text"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/base_font_size_14" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_regiestRecycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:scrollbars="none" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,170 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+                //
+            } else {
+                resources {
+                    //正式版本时，排除debug文件夹下所有调试文件
+                    exclude 'src/debug/*'
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+
+    // 依赖基础资源
+    api project(':library_resource')
+
+    // 公用的依赖库都在base这里统一引入
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support["recyclerview-v7"]
+
+    // 阿里路由框架(base模块不需要引入arouter-compiler编译框架)
+    api rootProject.ext.dependencies["arouter-api"]
+
+    // glide
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["glide-okhttp3-integration"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+
+    //     fastJson
+    api rootProject.ext.dependencies["fastjson"]
+
+    // SmartRefreshLayout 上拉下拉刷新
+    api rootProject.ext.dependencies["smartRefreshLayout"]
+
+    // RxJava
+    api rootProject.ext.dependencies["rxjava"]
+
+    // RxAndroid
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["rxbinding"]
+
+    // LitePals数据库
+    api rootProject.ext.dependencies["litePal"]
+
+    // 屏幕适配
+    api rootProject.ext.dependencies["adaptation"]
+
+    // retrofit
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["retrofit-converter-gson"]
+    api rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["okhttp-urlconnection"]
+    api rootProject.ext.dependencies["logging-interceptor"]
+
+    // logger
+    api rootProject.ext.dependencies["logger"]
+
+    // rxpermission
+    api rootProject.ext.dependencies["rxpermissions"]
+
+    // ViewModel和LiveData
+    api rootProject.ext.dependencies["lifecycle-extensions"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+    api rootProject.ext.dependencies["constraint-layout"]
+
+    // 图片压缩
+    api rootProject.ext.dependencies["luban"]
+
+    // 滚轮选择器
+    api rootProject.ext.dependencies["pickerView"]
+
+    // 底部导航条
+    api rootProject.ext.dependencies["bottomNavigationView"]
+
+    // 红点标记badgeView
+    api rootProject.ext.dependencies["badge"]
+
+    // flexBoxLayout
+    api rootProject.ext.dependencies["flexBoxLayout"]
+
+    // BRVAH adapter https://www.jianshu.com/p/b343fcff51b0
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+
+    // StateButton
+    api rootProject.ext.dependencies["stateButton"]
+
+    // alibaba:vlayout https://github.com/alibaba/vlayout/blob/master/README-ch.md
+    api('com.alibaba.android:vlayout:1.2.8@aar') {
+        transitive = true
+    }
+
+    // alibaba:UltraViewPager https://github.com/alibaba/UltraViewPager/blob/master/README-ch.md
+    api('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
+        transitive = true
+    }
+    api rootProject.ext.dependencies["commons-lang3"]
+
+    //EventBus
+    api rootProject.ext.dependencies["EventBus"]
+
+    // zxing
+    api rootProject.ext.dependencies["zxing"]
+
+    // BindingCollectionAdapter
+    api rootProject.ext.dependencies["bindingCollectionAdapter"]
+    api rootProject.ext.dependencies["bindingCollectionAdapter-Rv"]
+
+    //
+    api rootProject.ext.dependencies["gif-drawable"]
+
+    //banner
+    api rootProject.ext.dependencies["banner"]
+
+    //圆形imagview
+    api rootProject.ext.dependencies["roundedimageview"]
+
+
+//    //第三方支付
+//    api files('libs/testfairy-sdk.jar')
+////    implementation(name: 'ipay_hosted_standard_sdk_20180830', ext: 'aar')
+//    api(name: 'Ipay_hosted_standard_SDK_13062019', ext: 'aar')
+//    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
+}
+
+

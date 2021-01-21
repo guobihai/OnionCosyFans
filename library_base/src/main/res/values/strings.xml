@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name_main">CosyFans</string>
+
+
+    <string name="app_version_name">新版本</string>
+    <string name="app_verions_index">更新指数:</string>
+    <string name="app_verions">版本</string>
+    <string name="app_update">升级</string>
+</resources>

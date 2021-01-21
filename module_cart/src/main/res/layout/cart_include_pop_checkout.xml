@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="popModel"
+            type="cc.onion.cosyfans.cart.CartActivityViewModel" />
+
+        <import type="android.view.View"></import>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+
+
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toLeftOf="@+id/layout_right"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:text="@={popModel.totalMonery}"
+                android:textColor="@color/bluce"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:text="@={popModel.disMonery}"
+                android:id="@+id/tv_disc"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:textColor="@color/bluce"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_right"
+            android:onClick="@{v->popModel.goCartList()}"
+            android:layout_alignParentRight="true"
+            android:layout_width="130dp"
+            android:background="@color/bluce"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="@dimen/base_font_size_13"
+                android:text="@string/cart_go_checkout"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_checkout"
+                android:textSize="@dimen/base_font_size_13"
+                android:text="@={popModel.allMonery}"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

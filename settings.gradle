@@ -1,0 +1,18 @@
+include ':app',
+        ':module_category',
+        ':module_main',
+        ':module_weex',
+        ':module_trade',
+        ':module_search',
+        ':module_passport',
+        ':module_order',
+        ':module_my',
+        ':module_moment',
+        ':module_item',
+        ':module_error',
+        ':module_cart',
+        ':library_base',
+        ':library_resource',
+        ':module_home'
+
+rootProject.name='Onion-CosyFans'

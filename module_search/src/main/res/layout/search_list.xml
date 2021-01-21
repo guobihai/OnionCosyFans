@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.module_search.viewModel.SearchViewModel" />
+
+        <variable
+            name="baseViewModel"
+            type="cc.onion.cosyfans.base.viewmodel.SearchBaseViewModel" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/img_left"
+                android:src="@mipmap/icon_left"
+                android:layout_centerVertical="true"
+                android:layout_width="50dp"
+                android:layout_alignParentLeft="true"
+                android:scaleType="center"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_left"
+                android:layout_toLeftOf="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:background="@drawable/base_searchbar_drawable"
+                android:layout_height="30dp">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableStart="@mipmap/icon_search_magnifying_glass"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="15"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.searchText}"
+                    android:textColor="@color/text"
+                    android:textColorHint="#BFBFBF"
+                    android:textSize="14sp" />
+
+
+                <FrameLayout
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{v->viewModel.deleteSearchWord()}"
+                    android:visibility="@{viewModel.showDelete?View.VISIBLE:View.GONE}"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_delete" />
+
+                </FrameLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:text="搜索"
+                android:onClick="@{v->viewModel.toSearch()}"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/base_font_size_14"
+                android:textColor="@color/text"
+                android:layout_height="50dp"/>
+
+
+        </RelativeLayout>
+
+
+
+        <ScrollView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include
+                        layout="@layout/base_search_history"
+                        bind:viewModel="@{baseViewModel}"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    app:layout_constraintTop_toBottomOf="@+id/labels"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    >
+                    <View
+                        android:layout_margin="10dp"
+                        android:id="@+id/line"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/labels"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/line"
+                        />
+
+
+                    <TextView
+                        app:layout_constraintBaseline_toBaselineOf="@+id/line"
+                        android:id="@+id/tv_hot_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="热门搜索"
+                        android:textSize="@dimen/base_font_size_13"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#333333"
+                        />
+
+
+
+                    <cc.onion.cosyfans.module_search.weight.HotWordLabelsView
+                        android:id="@+id/labels_hot_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_padding"
+                        />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

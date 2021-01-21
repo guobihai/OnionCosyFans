@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data
+        >
+        
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.passport.RegisterViewModel" />
+        <import type="android.view.View"></import>
+    </data>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout_titile"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_bar_height">
+
+            <ImageView
+                android:id="@+id/img_return"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:src="@mipmap/icon_left" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/base_font_size_16"
+                android:textColor="@color/text"
+                android:text="@string/passport_reigist"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent">
+
+        </android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_below="@+id/layout_titile"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/base_padding"
+            android:paddingRight="@dimen/base_padding"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="22sp"
+                style="@style/PassportNoticeText"
+                android:text="@string/passport_welcome"
+                />
+
+
+
+
+            <LinearLayout
+                style="@style/PassportRowStyle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/PassportEditStyle"
+                    android:textColor="@color/text"
+                    android:text="@string/passport_invitation_code"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="#979797"
+                    android:layout_width="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    style="@style/PassportEditStyle"
+                    android:textColor="@color/text"
+                    android:text="@={model.invitationCode}"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="@string/passport_user_name"
+                    android:inputType="text"
+                    android:text="@={model.accountName}" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                style="@style/PassportRowStyle">
+
+                <LinearLayout
+                    android:onClick="@{v->model.chooseCountrt()}"
+                    android:id="@+id/layout_choose_country"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@mipmap/icon_malaysia"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/icon_triangle"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:background="#979797"
+                    android:layout_width="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/tv_conunt_number"
+                    android:layout_width="wrap_content"
+                    style="@style/PassportEditStyle"
+                    android:text="@={model.countryNumber}"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    style="@style/PassportEditStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/passport_mobile"
+                    android:inputType="numberSigned"
+                    android:maxLength="11"
+                    android:text="@={model.phone}" />
+
+                <cc.onion.cosyfans.passport.view.CountDownButton
+                    android:id="@+id/btn_verify_code_mobile"
+                    style="@style/PassportCountDownButtonStyle"
+                    android:enabled="false"
+                    android:onClick="@{v->model.getVerifiCode()}"
+                    android:text="@string/passport_get_code"
+                    app:countDown="true" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="left"
+                    style="@style/PassportBuleText"
+                    android:text="@string/passport_password_tips"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:paddingRight="@dimen/base_padding"
+                android:paddingLeft="@dimen/base_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="@string/passport_code"
+                    android:inputType="text"
+                    android:text="@={model.msgCode}" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+            <LinearLayout
+                android:paddingRight="@dimen/base_padding"
+                android:paddingLeft="@dimen/base_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_pass"
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="@string/passport_password"
+                    android:inputType="textPassword"
+                    android:text="@={model.password}" />
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:onClick="@{v->model.checkSeeState1()}"
+                    android:visibility="@{model.showPasswordSee1?View.VISIBLE:View.GONE}">
+
+                    <ImageView
+                        android:id="@+id/img_see_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_see" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:paddingRight="@dimen/base_padding"
+                android:paddingLeft="@dimen/base_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_pass_again"
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="@string/passport_password_quick"
+                    android:inputType="textPassword"
+                    android:text="@={model.passwordAgain}" />
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:onClick="@{v->model.checkSeeState2()}"
+                    android:visibility="@{model.showPasswordSee2?View.VISIBLE:View.GONE}">
+
+                    <ImageView
+                        android:id="@+id/img_see_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_see" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <FrameLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_password_tips"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="left"
+                    style="@style/PassportBuleText"
+                    android:text="@string/passport_password_tips"
+                    />
+            </FrameLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <com.deadline.statebutton.StateButton
+            android:layout_above="@+id/layout_flexbox"
+            android:id="@+id/btn_sign"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="@{v->model.submit()}"
+            android:text="@string/passport_reigist"
+            android:textSize="@dimen/base_font_size_15"
+            app:normalBackgroundColor="#F1F2F4"
+            app:normalTextColor="@color/text_sub_dark"
+            app:pressedBackgroundColor="#F1F2F4"
+            app:pressedTextColor="@color/text_sub_dark"
+            app:radius="100dp"
+            app:unableBackgroundColor="#F1F2F4"
+            app:unableTextColor="@color/text_sub_dark" />
+
+
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/layout_flexbox"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:flexWrap="wrap">
+
+
+            <TextView
+                android:id="@+id/tv_check_agreen"
+                android:drawablePadding="10dp"
+                android:onClick="@{v->model.checkAgreen()}"
+                android:drawableLeft="@mipmap/icon_cheack_state"
+                style="@style/PassportNoticeText"
+                android:text="@string/passport_me_agree" />
+
+            <TextView
+                android:id="@+id/tv_user_protocol"
+                style="@style/PassportNoticeText"
+                android:onClick="@{v->model.seeUserProtocol()}"
+                android:text="@string/passport_user_agreement"
+                />
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_loginout">退出登录</string>
+    <string name="my_setting">设置</string>
+
+
+    <string name="my_add_new_address">新增新地址</string>
+
+    <string name="my_merchant_center">商家中心</string>
+    <string name="my_person_center">会员中心</string>
+
+
+    <!--    商家-->
+    <string name="my_total_retail">零售总额</string>
+    <string name="my_cumulative_income">累计收入</string>
+    <string name="my_try_out">试用期即将到期，立即升级>></string>
+    <string name="my_my_sale_order">我的销售订单</string>
+    <string name="my_register_user">注册用户统计</string>
+    <string name="my_bd_manager">BD管理</string>
+    <string name="my_income">我的收益</string>
+    <string name="my_deposit">我的押金</string>
+    <string name="my_shop_info">店铺信息</string>
+    <string name="my_shop_visitors">最近访客</string>
+    <string name="my_invitation_code">邀请码:</string>
+    <string name="my_CP">Pre-Cosy Discoversier</string>
+
+
+    <string name="my_refund_policy">退款退货政策</string>
+    <string name="my_transportation_policy">运输配送政策</string>
+    <string name="my_user_center">帮助中心</string>
+
+    <string name="my_show_merchant_title">店铺信息</string>
+    <string name="my_btn_save_text">保存</string>
+    <string name="my_store_name">店铺名称</string>
+    <string name="my_store_introdution">店铺简介</string>
+    <string name="my_toast_input_name">请输入店铺名称</string>
+    <string name="my_load_error_data">数据加载失败...</string>
+
+    <!--销售订单-->
+    <string name="my_sale_order_title">我的销售订单</string>
+    <string name="my_product_order_no">订单号:</string>
+    <string name="my_product_count_num">商品总数:</string>
+    <string name="my_product_all_money">订单总额:</string>
+    <string name="my_order_consigne">收货人:</string>
+    
+    <string name="my_order_income">我的收益</string>
+    <string name="my_order_outcome">扣除收益</string>
+    <string name="my_order_traking">查看物流</string>
+
+    <string name="my_monye_type">￥</string>
+    <string name="my_order_no_data">亲，暂无数据!</string>
+
+    <string name="my_tv_close_btn">关闭</string>
+    <string name="my_order_income_title">订单收益详情</string>
+
+    <string name="my_order_username">订购人:</string>
+    <string name="my_order_time">支付时间:</string>
+
+    <string name="my_order_no_name">拆单号:</string>
+
+    <string name="my_order_delivering">待付款</string>
+    <string name="my_order_complete">已完成</string>
+
+    <string name="my_tracking_company_name">物流公司:</string>
+    <string name="my_tracking_order_name">物流单号:</string>
+    <string name="my_tracking_infomation">物流信息</string>
+
+
+    <!--用户详情-->
+    <string name="my_register_username">用户名:</string>
+    <string name="my_register_tel_no">电话号码:</string>
+    <string name="my_register_time">注册时间:</string>
+    <string name="my_register_by">注册在:</string>
+    <string name="my_register_user_type">用户类型:</string>
+
+    <string name="my_item_register_user">注册用户</string>
+    <string name="my_item_purchase_user">下单用户</string>
+    <string name="my_item_order_num">订单数量</string>
+    <string name="my_item_per_cus">客单价</string>
+    <string name="my_item_total_sales">零售总额</string>
+    <string name="my_item_total_incomes">累计收益</string>
+    <string name="my_item_total_refund">退款总额</string>
+    <string name="my_item_refund_incomes">退款收益</string>
+    <string name="my_item_direct_cd">直拓CD</string>
+    <string name="my_item_indirect_cd">间拓CD</string>
+    <string name="my_search_text">搜索</string>
+
+    <string name="my_statistics_userdetail">详情</string>
+    <string name="my_register_title">注册用户统计</string>
+    <!--用户收益详情-->
+    <string name="my_detail_order_quantity">订单数量：</string>
+    <string name="my_detail_total">消费总额：</string>
+    <string name="my_detail_total_refunded">退款总额：</string>
+    <string name="my_detail_contribution_income">贡献收益：</string>
+    <string name="my_detail_per_customer_transac">客单价：</string>
+
+    <string-array name="my_sale_orders_array">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待收货</item>
+        <item>已完成</item>
+        <item>退款/退货</item>
+    </string-array>
+
+    <string-array name="my_spinner_array">
+        <item>全部</item>
+    </string-array>
+
+</resources>

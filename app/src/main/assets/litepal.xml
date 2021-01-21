@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名-->
+    <dbname value="ujuz_agent" />
+    <!--数据库版本(注意：这个文件的每次更改都需要增加1个版本号)-->
+    <version value="15" />
+
+    <!--在<list>标签里面通过<mapping>定义数据库模型映射类-->
+    <list>
+
+        <!--商品搜索历史数据 -->
+        <mapping class="cc.onion.cosyfans.base.entity.SearchHouseData" />
+
+    </list>
+
+</litepal>

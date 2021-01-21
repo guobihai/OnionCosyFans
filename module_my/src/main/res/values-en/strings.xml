@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_loginout">Sign Out</string>
+    <string name="my_setting">setting</string>
+
+
+    <string name="my_add_new_address">Add New Address</string>
+
+    <string name="my_merchant_center">Merchant Center</string>
+    <string name="my_person_center">Personal Center</string>
+
+
+    <!--    商家-->
+    <string name="my_total_retail">Total Sales</string>
+    <string name="my_cumulative_income">Total Incomes</string>
+    <string name="my_try_out">Trial period is ending soon, become Cosy Discoveries now >></string>
+    <string name="my_my_sale_order">My Sales</string>
+    <string name="my_register_user">Registered User</string>
+    <string name="my_bd_manager">BD Manager</string>
+    <string name="my_income">Income Statements</string>
+    <string name="my_deposit">My Deposit</string>
+    <string name="my_shop_info">Store Information</string>
+    <string name="my_shop_visitors">Recent Visitors</string>
+    <string name="my_invitation_code">Invitation code:</string>
+    <string name="my_CP">Pre-Cosy Discoversier</string>
+
+
+    <string name="my_refund_policy">Return Refund</string>
+    <string name="my_transportation_policy">Shipping Delivery</string>
+    <string name="my_user_center">Help Center</string>
+
+    <string name="my_show_merchant_title">Stores Information</string>
+    <string name="my_btn_save_text">save</string>
+    <string name="my_store_name">Store name</string>
+    <string name="my_store_introdution">Store Introduction</string>
+    <string name="my_toast_input_name">plean input shop name</string>
+    <string name="my_load_error_data">load data faile...</string>
+
+
+    <!--销售订单-->
+    <string name="my_sale_order_title">My Sales</string>
+    <string name="my_product_order_no">Order No:</string>
+    <string name="my_product_count_num"></string>
+    <string name="my_product_all_money">Total Amount:</string>
+    <string name="my_order_consigne">Consigne:</string>
+
+    <!--订单收益-->
+    <string name="my_order_income">Order Incomes</string>
+    <string name="my_order_outcome">Refunded Incomes</string>
+    <string name="my_order_traking">Logistic Trcking</string>
+
+    <string name="my_monye_type">RM</string>
+    <string name="my_order_no_data">Dear, I have no data yet!</string>
+    <string name="my_tv_close_btn">close</string>
+    <string name="my_order_income_title">Detail</string>
+    <string name="my_order_username">Order by:</string>
+    <string name="my_order_time">Payment Time:</string>
+
+
+    <string name="my_order_no_name">Order No:</string>
+    <string name="my_order_delivering">Delivering</string>
+    <string name="my_order_complete">Complete</string>
+
+
+    <string name="my_tracking_company_name">Shipping Method:</string>
+    <string name="my_tracking_order_name">Tracking Number:</string>
+    <string name="my_tracking_infomation">Logistics informatio</string>
+
+    <!--用户详情-->
+    <string name="my_register_username">User Name:</string>
+    <string name="my_register_tel_no">Contact Tel:</string>
+    <string name="my_register_time">Registration Date:</string>
+    <string name="my_register_by">Registered @:</string>
+    <string name="my_register_user_type">Account Type:</string>
+
+    <string name="my_item_register_user">Registered User</string>
+    <string name="my_item_purchase_user">Purchase User</string>
+    <string name="my_item_order_num">Order Quantity</string>
+    <string name="my_item_per_cus">Per Cus. Trans.</string>
+    <string name="my_item_total_sales">Total Sales</string>
+    <string name="my_item_total_incomes">Total Incomes</string>
+    <string name="my_item_total_refund">Total Refund</string>
+    <string name="my_item_refund_incomes">Refund Incomes</string>
+    <string name="my_item_direct_cd">Direct CD</string>
+    <string name="my_item_indirect_cd">Indirect CD</string>
+
+    <string name="my_register_title">Registered User</string>
+    <string name="my_search_text">Search</string>
+    <string name="my_statistics_userdetail">Detail</string>
+
+    <string name="my_detail_order_quantity">Order Quantity:</string>
+    <string name="my_detail_total">Total:</string>
+    <string name="my_detail_total_refunded">Total Refunded:</string>
+    <string name="my_detail_contribution_income">Contribution Income:</string>
+    <string name="my_detail_per_customer_transac">Per Customer Transaction:</string>
+
+    <string-array name="my_sale_orders_array">
+        <item>All</item>
+        <item>Unpaid</item>
+        <item>Delivering</item>
+        <item>Completed</item>
+        <item>Return/Refund</item>
+    </string-array>
+
+    <string-array name="my_spinner_array">
+        <item>All</item>
+    </string-array>
+
+</resources>

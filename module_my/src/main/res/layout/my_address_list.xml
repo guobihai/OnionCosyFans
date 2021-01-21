@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.my.viewdModel.AddressListAndroidViewModel" />
+        <import type="android.view.View"/>
+    </data>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/rl_address_lsit"
+        android:layout_width="match_parent"
+       android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_marginRight="@dimen/base_margin"
+        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:visibility="@{model.isShow?View.VISIBLE:View.GONE}"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_address_nodata"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:text="亲，暂无数据"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_sub_dark"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.deadline.statebutton.StateButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:enabled="true"
+        android:gravity="center"
+        android:text="@string/my_add_new_address"
+        android:textSize="@dimen/base_font_size_15"
+        android:onClick="@{v->model.addNewAddress()}"
+        app:normalBackgroundColor="#277EE3"
+        app:normalTextColor="@color/white"
+        app:pressedBackgroundColor="#1269D5"
+        app:pressedTextColor="@color/white"
+        app:radius="100dp"
+        app:unableBackgroundColor="#5064FF"
+        android:layout_marginBottom="20dp"
+        app:unableTextColor="@color/white" />
+
+</RelativeLayout>
+
+
+</layout>

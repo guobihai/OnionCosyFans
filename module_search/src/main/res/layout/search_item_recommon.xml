@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/base_dialog_bg"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_show_item"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+   <ImageView
+       android:id="@+id/img_products"
+       android:layout_width="match_parent"
+       android:layout_height="170dp"
+       android:scaleType="fitCenter"
+       android:background="@mipmap/home_item_detail"
+       />
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_item_logon"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="center"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/item_detail_no_sku"
+            />
+
+
+        <TextView
+        android:paddingTop="10dp"
+        android:layout_below="@+id/img_products"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/item_products_name"
+        android:textColor="@color/text"
+        android:text="Home Products veerison"
+        android:textSize="@dimen/base_font_size_13"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:layout_height="wrap_content"/>
+
+    <com.deadline.statebutton.StateButton
+        android:layout_below="@+id/item_products_name"
+        android:id="@+id/item_button_dis"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_width="64dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="30% OFF "
+        android:gravity="center"
+        app:radius="3dp"
+        app:round="false"
+        app:normalStrokeWidth="0.5dp"
+        app:pressedStrokeWidth="1dp"
+        app:unableStrokeWidth="2dp"
+        android:textSize="@dimen/base_font_size_12"
+        app:normalStrokeColor="#F85717"
+        app:normalTextColor="#F85717"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/item_button_dis"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_products_price"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/base_font_size_15"
+            android:textColor="@color/bluce"
+            android:text="RM299"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/item_products_price"
+            android:id="@+id/item_products_price_real"
+            android:layout_below="@+id/item_button_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/base_font_size_13"
+            android:textColor="@color/text_sub_dark"
+            android:text="M.S 99"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

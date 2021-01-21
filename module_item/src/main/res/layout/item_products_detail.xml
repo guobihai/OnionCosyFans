@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.item.viewModel.ProductsViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/properties_sale_detail_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/body"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:background="@color/white"
+            android:gravity="top"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:src="@mipmap/icon_left"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_alignParentLeft="true"
+                android:scaleType="center"
+                android:layout_height="match_parent"/>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/item_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabGravity="center"
+                app:tabMode="fixed"
+                android:textColor="#666666"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="3dp"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextAppearance="@style/CollectTabLayoutTextStyle"
+                app:tabUnboundedRipple="true"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_postos"
+            android:background="@color/white"
+            android:gravity="top"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:id="@+id/img_left_1"
+                android:src="@mipmap/icon_left"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_alignParentLeft="true"
+                android:scaleType="center"
+                android:layout_height="match_parent"/>
+
+
+
+
+
+            <TextView
+                android:background="@drawable/item_item_detail_edit_shape"
+                android:id="@+id/img_editPost"
+                android:src="@mipmap/icon_left"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                android:scaleType="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:drawableLeft="@mipmap/item_edit"
+                android:drawablePadding="10dp"
+                android:text="@string/home_posts"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+
+
+
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@+id/layout_title"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        </android.support.v4.view.ViewPager >
+
+
+    </RelativeLayout>
+
+
+</layout>

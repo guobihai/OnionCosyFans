@@ -1,0 +1,181 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // ARouter路由框架配置
+
+        //  AROUTER_GENERATE_DOC: "enable" 生成的文档路径 : build/generated/source/apt/(debug or release)/com/alibaba/android/arouter/docs/arouter-map-of-${moduleName}.json
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+
+    // 统一资源前缀，规范资源引用
+    resourcePrefix "app_"
+
+    signingConfigs {
+        release {
+            storeFile file("keystore/YJYZ_UB.jks")
+            storePassword "youjuyouzhuapp"
+            keyAlias "优居优住UB"
+            keyPassword "yjyzub"
+            v2SigningEnabled false
+        }
+        debug {
+            storeFile file("keystore/YJYZ_UB.jks")
+            storePassword "youjuyouzhuapp"
+            keyAlias "优居优住UB"
+            keyPassword "yjyzub"
+        }
+    }
+
+//    【测试环境，我们内部测试2环境】
+//    https://cosyfans-api.factorychain2social.cn
+//
+//    【稳定环境】
+//    https://cosyfans-api.buykerbuyker.cn/
+//
+//    【生产环境】
+//    https://api.cosyfans.com/
+
+
+    buildTypes {
+        // PS:这里的双引号和\千万不要改，否则编译取不到这个值
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            // 根据编译版本动态配置域名 (生成环境 api.yjyz.com  Stag api-stag.yjyz.com)
+
+            buildConfigField "Boolean", "DEBUG_MODE", "false"
+            // 测试环境1host
+            buildConfigField "String", "BASE_HOST_ONE", "\"https://api.cosyfans.com\""
+
+            //签名常量 根据后台网站自动生成 -生产
+            buildConfigField "String", "Base_APIV", "\"1.0.0\""
+            buildConfigField "String", "Base_APPID", "\"45758921074\""
+            buildConfigField "String", "Base_APPKEY", "\"YTvxPoiCjqKo\""
+            buildConfigField "String", "Base_KEY", "\"cYpg0Y0iPP2sTbGY3Plh\""
+            buildConfigField "String", "Base_DEVPLATFORMID", "5"
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            // 根据编译版本动态配置域名
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+            // 测试环境1host
+//            buildConfigField "String", "BASE_HOST", "\"https://cosyfans-api.factorychain2social.cn\""
+            //生产
+            buildConfigField "String", "BASE_HOST", "\"https://api.cosyfans.com\""
+            //稳定环境
+//            buildConfigField "String", "BASE_HOST", "\"https://cosyfans-api.buykerbuyker.cn\""
+
+            //签名常量 根据后台网站自动生成 -测试
+//            buildConfigField "String", "Base_APIV", "\"1.0.0\""
+//            buildConfigField "String", "Base_APPID", "\"45758921074\""
+//            buildConfigField "String", "Base_APPKEY", "\"YTvxPoiCjqKo\""
+//            buildConfigField "String", "Base_KEY", "\"cYpg0Y0iPP2sTbGY3Plh\""
+//            buildConfigField "String", "Base_DEVPLATFORMID", "\"6\""
+
+            //稳定
+//            buildConfigField "String", "Base_APIV", "\"1.0.0\""
+//            buildConfigField "String", "Base_APPID", "\"36690389776\""
+//            buildConfigField "String", "Base_APPKEY", "\"YTiMVUIxYOZx\""
+//            buildConfigField "String", "Base_KEY", "\"VqBzSs2NNmkAMvJSEK9Y\""
+//            buildConfigField "String", "Base_DEVPLATFORMID", "\"6\""
+
+            //生产
+            buildConfigField "String", "Base_APIV", "\"1.1.0\""
+            buildConfigField "String", "Base_APPID", "\"6823859509\""
+            buildConfigField "String", "Base_APPKEY", "\"YTQDwINNHSBd\""
+            buildConfigField "String", "Base_KEY", "\"BjGfUmcERUJG9NZcMLPF\""
+            buildConfigField "String", "Base_DEVPLATFORMID", "\"6\""
+
+
+
+
+
+//            android.applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/signAndroid/debug")
+//                    outputFileName = "com.ujuz.uerp_${defaultConfig.versionName}_${variant.buildType.name}.apk"
+//                }
+            }
+        }
+
+    dataBinding {
+        enabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 在该宿主项目中判断组件是否需要独立运行
+    if (isBuildModule.toBoolean()) {
+        // 组件独立运行时，宿主项目直接依赖基础库，避免编译错误
+        implementation project(':library_base')
+    } else {
+        //main
+        implementation project(':module_main')
+        // 主界面
+        implementation project(':module_home')
+        //分类
+        implementation project(':module_category')
+        //优惠券
+        implementation project(':module_weex')
+        //交易结算
+        implementation project(':module_trade')
+        //搜索
+        implementation project(':module_search')
+        //注册登陆
+        implementation project(':module_passport')
+        //订单
+        implementation project(':module_order')
+        //我的
+        implementation project(':module_my')
+        //素材圈
+        implementation project(':module_moment')
+        //商品
+        implementation project(':module_item')
+        //错误界面
+        implementation project(':module_error')
+        //购物车
+        implementation project(':module_cart')
+    }
+
+
+
+
+
+}

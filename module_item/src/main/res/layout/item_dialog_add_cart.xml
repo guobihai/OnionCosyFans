@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/item_conpon_bg_shape"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/img_cancle"
+            android:padding="10dp"
+            android:id="@+id/layout_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_products"
+                android:layout_width="70dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/home_item_detail"
+                android:layout_height="70dp"
+                android:scaleType="fitCenter"
+                />
+
+
+            <RelativeLayout
+                android:layout_toRightOf="@+id/img_products"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_products_monery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM299"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/bluce"
+                    android:paddingBottom="5dp"
+                    android:textStyle="bold"
+                    android:layout_above="@+id/tv_products_id"
+                    android:textSize="@dimen/base_font_size_18" />
+
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/tv_products_monery"
+                    android:id="@+id/tv_products_monery_real"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="RM333"
+                    android:textColor="@color/text_sub_dark"
+                    android:layout_above="@+id/tv_products_id"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/base_font_size_12" />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_products_id"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:text="Products:iD3334444444"
+                    android:textColor="@color/text_sub_dark"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/base_font_size_12" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_cancle"
+            android:paddingRight="15dp"
+           android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_conpon_recyclerview"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/layout_limit"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/base_font_size_13"
+            android:padding="10dp"
+            android:text="@string/item_number"
+            android:textColor="@color/text"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/tv_limit_number"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/base_font_size_13"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="每人限购8件"
+            android:textColor="@color/message_box_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--    item_quantity-->
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="15dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <FrameLayout
+            android:id="@+id/layout_plus"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:scaleType="center"
+                android:id="@+id/img_plus"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_cart_add"
+                />
+        </FrameLayout>
+
+            <EditText
+                android:id="@+id/tv_count"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+               android:paddingLeft="20dp"
+                android:minWidth="35dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/item_cart_add_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:textColor="@color/text"
+                android:hint="1"
+                android:text="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="@dimen/base_font_size_12"
+                />
+
+        <FrameLayout
+            android:id="@+id/layout_less"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:id="@+id/img_Less"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_cart_add"
+                />
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

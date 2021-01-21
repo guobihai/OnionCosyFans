@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="ConsyFansTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="ConsyFansActivityTheme" parent="ConsyFansTheme">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="ConsyFansActivityTheme.FullScreen" parent="ConsyFansTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="ConsyFansActivityTheme.Transparent" parent="ConsyFansTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/activityAnim</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="ConsyFansActivityTheme.Welcom" parent="ConsyFansTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@mipmap/icon_welcome_bg_new</item>
+        <item name="android:gravity">center</item>
+        <item name="android:tileMode">disabled</item>
+    </style>
+
+
+    <style name="Toolbar.Nav" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="Toolbar.Nav.White" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!--ToolBar主题菜单都是白色-->
+    <style name="Toolbar.NavAndTitle.White" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Toolbar.TitleText.White" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Navbar.Nav" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimary">@color/theme</item>
+    </style>
+
+    <style name="TabLayoutTextSize" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+    </style>
+
+    <style name="ContractTabLayoutTextSize" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/base_font_size_16</item>
+    </style>
+
+    <style name="BaseTabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <!-- 通用的Dialog风格 -->
+    <style name="UBaseDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="BaseDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="BaseDialog">
+        <item name="android:windowEnterAnimation">@anim/base_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/base_exit_to_bottom</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <!--popupWindow动画-->
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+<!--    App列表View-->
+    <style name="BaseAppLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#F5F5F5</item>
+    </style>
+
+
+    <!-- 使用style方式定义activity切换动画 -->
+    <style name="activityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/prompt_alert_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/prompt_alert_exit</item>
+    </style>
+
+
+</resources>

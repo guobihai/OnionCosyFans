@@ -1,0 +1,160 @@
+<resources>
+
+
+    <style name="MyOrderTextStyle">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/base_padding</item>
+        <item name="android:paddingRight">@dimen/base_padding</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+
+
+<!--        基础样式-->
+    <style name="MyTextStyle">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingLeft">@dimen/base_padding</item>
+        <item name="android:paddingRight">@dimen/base_padding</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+
+
+<!--    我的模块横线-->
+    <style name="MyLineStyle" parent="BaseAppLineStyle">
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_height">0.8dp</item>
+    </style>
+
+
+    <!--    购物车圈圈-->
+    <style name="MyCicleStyle">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+
+    <style name="MyBaseTextStyle" >
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+
+<!--    布局样式-->
+    <style name="MyLayoutStyle">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">@dimen/base_margin</item>
+        <item name="android:layout_marginRight">@dimen/base_margin</item>
+        <item name="android:background">@drawable/item_my_bg_shape</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <!-- 单选框选择状态-->
+    <style name="my_item_my_rdiobuttonStyle">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:textColor">@color/my_item_radiobutton_colors</item>
+        <item name="android:background">@drawable/my_item_my_radiobutton_bg</item>
+    </style>
+
+    <style name="my_ed_textviewStyle">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="my_ed_editTextStyle">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/my_editext_bg_color</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">top|left</item>
+    </style>
+
+    <!--我的订单 tablayout-->
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+    </style>
+
+
+    <style name="my_common_spinner" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="my_register_lllayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/dp_10</item>
+    </style>
+
+
+
+    <style name="my_register_LLCStyle" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/line_colors</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="my_register_textviewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_sub</item>
+        <item name="android:textSize">@dimen/base_font_size_12</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="my_register_textviewValueStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/base_font_size_16</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.passport.SigninViewModel" />
+
+        <import type="android.view.View"></import>
+    </data>
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_bar_height">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:src="@mipmap/icon_left" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/base_font_size_16"
+                android:textColor="@color/text"
+                android:text="@string/passport_login"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="87dp"
+            android:src="@mipmap/icon_app" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="请输入手机号"
+                    android:inputType="text"
+                    android:text="@={model.account}"
+                    />
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                  >
+
+                    <ImageView
+                        android:onClick="@{v->model.deletePhone()}"
+                        android:visibility="@{model.showPhoneDelete?View.VISIBLE:View.GONE}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_delete" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_pass"
+                    style="@style/PassportEditStyle"
+                    android:layout_weight="1"
+                    android:hint="请输入密码"
+                    android:text="@={model.password}"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+            />
+
+
+                <FrameLayout
+                    android:onClick="@{v->model.showSeeState()}"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                   >
+
+                    <ImageView
+                        android:id="@+id/img_see"
+                        android:onClick="@{v->model.showSeeState()}"
+                        android:visibility="@{model.showPassDelete?View.VISIBLE:View.GONE}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_see" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+            <com.mcxtzhang.captchalib.SwipeCaptchaView
+                android:visibility="gone"
+                android:id="@+id/swipeCaptchaView"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/home_advert_one"
+                app:captchaHeight="30dp"
+                app:captchaWidth="30dp"/>
+
+            <SeekBar
+                android:visibility="gone"
+                android:id="@+id/dragBar"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/swipeCaptchaView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:progressDrawable="@color/base_bg"
+                android:thumb="@drawable/base_searchbar_drawable"/>
+
+
+
+
+
+
+        <LinearLayout style="@style/PassportRowStyle">
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+        </LinearLayout>
+
+        <com.deadline.statebutton.StateButton
+            android:layout_above="@+id/tv_buttom"
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/passport_login"
+            android:textSize="@dimen/base_font_size_15"
+            android:onClick="@{v->model.submit()}"
+            app:normalBackgroundColor="#277EE3"
+            app:normalTextColor="@color/white"
+            app:pressedBackgroundColor="#1269D5"
+            app:pressedTextColor="@color/white"
+            app:radius="100dp"
+            app:unableBackgroundColor="#5064FF"
+            android:layout_marginBottom="15dp"
+            app:unableTextColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/tv_buttom"
+            style="@style/PassportNoticeText"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="25dp"
+            android:onClick="@{v->model.forgetPassword()}"
+            android:text="@string/passport_forget"
+            android:textColor="@color/theme" />
+
+    </RelativeLayout>
+</layout>

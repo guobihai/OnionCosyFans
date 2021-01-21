@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@color/bluce"
+        android:layout_width="match_parent"
+        android:paddingTop="30dp"
+        android:layout_height="85dp">
+
+        <RadioGroup
+            android:id="@+id/my_item_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/item_my_layout_bg">
+
+            <RadioButton
+                android:id="@+id/my_radiobtn_merchant_center"
+                android:checked="true"
+                style="@style/my_item_my_rdiobuttonStyle"
+                android:text="@string/my_merchant_center"
+                />
+
+            <RadioButton
+                android:id="@+id/my_radiobtn_person_center"
+                style="@style/my_item_my_rdiobuttonStyle"
+                android:text="@string/my_person_center"
+                android:textSize="@dimen/base_font_size_13" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_center_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+    </android.support.v4.view.ViewPager >
+
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        android:layout_height="50dp"/>
+
+
+    <RelativeLayout
+        android:background="@drawable/base_dialog_bg"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_tag"
+        android:layout_width="80dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_add"
+        android:layout_height="50dp"/>
+
+
+        <ezy.ui.view.NoticeView
+            android:layout_toRightOf="@+id/img_tag"
+            android:id="@+id/notice"
+            android:layout_toLeftOf="@+id/img_right"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:nvIconPadding="5dp"
+            app:nvIconTint="@android:color/white"
+            app:nvTextColor="@color/text"
+            app:nvTextGravity="left"
+            app:nvTextSize="@dimen/base_font_size_13"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:layout_width="15dp"
+            android:scaleType="centerCrop"
+            android:layout_height="15dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+   
+

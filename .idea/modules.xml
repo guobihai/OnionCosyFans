@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Onion-CosyFans.iml" filepath="$PROJECT_DIR$/Onion-CosyFans.iml" group="Onion-CosyFans" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Onion-CosyFans/app" />
+      <module fileurl="file://$PROJECT_DIR$/library_base/library_base.iml" filepath="$PROJECT_DIR$/library_base/library_base.iml" group="Onion-CosyFans/library_base" />
+      <module fileurl="file://$PROJECT_DIR$/library_resource/library_resource.iml" filepath="$PROJECT_DIR$/library_resource/library_resource.iml" group="Onion-CosyFans/library_resource" />
+      <module fileurl="file://$PROJECT_DIR$/module_cart/module_cart.iml" filepath="$PROJECT_DIR$/module_cart/module_cart.iml" group="Onion-CosyFans/module_cart" />
+      <module fileurl="file://$PROJECT_DIR$/module_category/module_category.iml" filepath="$PROJECT_DIR$/module_category/module_category.iml" group="Onion-CosyFans/module_category" />
+      <module fileurl="file://$PROJECT_DIR$/module_error/module_error.iml" filepath="$PROJECT_DIR$/module_error/module_error.iml" group="Onion-CosyFans/module_error" />
+      <module fileurl="file://$PROJECT_DIR$/module_home/module_home.iml" filepath="$PROJECT_DIR$/module_home/module_home.iml" group="Onion-CosyFans/module_home" />
+      <module fileurl="file://$PROJECT_DIR$/module_item/module_item.iml" filepath="$PROJECT_DIR$/module_item/module_item.iml" group="Onion-CosyFans/module_item" />
+      <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" group="Onion-CosyFans/module_main" />
+      <module fileurl="file://$PROJECT_DIR$/module_moment/module_moment.iml" filepath="$PROJECT_DIR$/module_moment/module_moment.iml" group="Onion-CosyFans/module_moment" />
+      <module fileurl="file://$PROJECT_DIR$/module_my/module_my.iml" filepath="$PROJECT_DIR$/module_my/module_my.iml" group="Onion-CosyFans/module_my" />
+      <module fileurl="file://$PROJECT_DIR$/module_order/module_order.iml" filepath="$PROJECT_DIR$/module_order/module_order.iml" group="Onion-CosyFans/module_order" />
+      <module fileurl="file://$PROJECT_DIR$/module_passport/module_passport.iml" filepath="$PROJECT_DIR$/module_passport/module_passport.iml" group="Onion-CosyFans/module_passport" />
+      <module fileurl="file://$PROJECT_DIR$/module_search/module_search.iml" filepath="$PROJECT_DIR$/module_search/module_search.iml" group="Onion-CosyFans/module_search" />
+      <module fileurl="file://$PROJECT_DIR$/module_trade/module_trade.iml" filepath="$PROJECT_DIR$/module_trade/module_trade.iml" group="Onion-CosyFans/module_trade" />
+      <module fileurl="file://$PROJECT_DIR$/module_weex/module_weex.iml" filepath="$PROJECT_DIR$/module_weex/module_weex.iml" group="Onion-CosyFans/module_weex" />
+    </modules>
+  </component>
+</project>

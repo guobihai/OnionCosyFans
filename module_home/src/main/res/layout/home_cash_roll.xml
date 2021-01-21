@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@drawable/base_dialog_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_voucher"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:padding="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/base_font_size_16" />
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_cancle"
+            android:paddingRight="15dp"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_unUse_recyclerview"
+        android:scrollbars="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+        <com.deadline.statebutton.StateButton
+            android:layout_above="@+id/tv_buttom"
+            android:id="@+id/btn_watch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/home_view"
+            android:textSize="@dimen/base_font_size_15"
+            app:normalBackgroundColor="#277EE3"
+            app:normalTextColor="@color/white"
+            app:pressedBackgroundColor="#1269D5"
+            app:pressedTextColor="@color/white"
+            app:radius="100dp"
+            app:unableBackgroundColor="#5064FF"
+            app:unableTextColor="@color/white" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/layout_delete"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:src="@mipmap/icon_delete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

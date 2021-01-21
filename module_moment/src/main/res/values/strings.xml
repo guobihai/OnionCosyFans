@@ -1,0 +1,20 @@
+<resources>
+    <string name="moment_app_name">module_moment</string>
+    <string name="moment_search">请输入关键字</string>
+
+
+    <string name="moment_btn_post">发布素材</string>
+    <string name="moment_show_more">全文</string>
+    <string name="moment_no_data">暂无素材～</string>
+    <string name="moment_tv_delete">删除</string>
+    <string name="moment_tv_save">保存</string>
+    <string name="moment_tv_share">分享</string>
+
+    <string name="moment_tv_see_other">看别人的</string>
+
+    <string-array name="moment_tab_array">
+        <item>素材中心</item>
+        <item>精选</item>
+        <item>官方</item>
+    </string-array>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/item_my_bg_shape"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:paddingLeft="10dp"
+            android:id="@+id/layout_select"
+            android:layout_width="40dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/img_select"
+            style="@style/MyCicleStyle"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_cart_cicle"
+            />
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_toRightOf="@+id/layout_select"
+            android:text="333"
+            android:textStyle="bold"
+              style="@style/MyBaseTextStyle"
+            />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_toRightOf="@+id/tv_name"
+            android:text="+0086 15626165037"
+            style="@style/MyBaseTextStyle"
+            />
+
+
+
+        <FrameLayout
+            android:paddingLeft="10dp"
+            android:id="@+id/layout_edit"
+            android:layout_width="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                style="@style/MyCicleStyle"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icon_my_01"
+                />
+        </FrameLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="40dp"
+            android:text="默认"
+            android:background="@drawable/item_my_bluce_shape"
+            style="@style/MyBaseTextStyle"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:text="4444444444444444444444444"
+            android:maxLines="3"
+            android:ellipsize="end"
+            style="@style/MyBaseTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

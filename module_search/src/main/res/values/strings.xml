@@ -1,0 +1,9 @@
+<resources>
+
+
+
+
+    <string name="search_tips">没有你想要的商品</string>
+    <string name="search_recommont">--为你推荐--</string>
+    <string name="search">搜索</string>
+</resources>

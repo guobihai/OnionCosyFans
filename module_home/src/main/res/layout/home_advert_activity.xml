@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="advertThree"
+            type="cc.onion.cosyfans.home.viewmodel.HomeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layout_activity_bg"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/base_bg"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_activity_bg"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/home_advert_one"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            >
+
+
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_activity_1"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_advert_three"
+            android:scaleType="fitCenter"
+            android:layout_height="90dp"/>
+
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_activity_2"
+            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_advert_three"
+            android:scaleType="fitCenter"
+            android:layout_height="90dp"/>
+
+
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_activity_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_advert_three"
+            android:scaleType="fitCenter"
+            android:layout_height="90dp"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+
+</layout>

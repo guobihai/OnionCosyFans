@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Base color-->
+    <color name="theme">#8C46FF</color>
+    <color name="theme_down">#2D5FB6</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="light_grey">#BFBFBF</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#FF4EC081</color>
+    <color name="base_bg">#F1F2F4</color>
+    <color name="bluce">#5363FF</color>
+    <color name="orange">#F85717</color>
+    <color name="baseBodyColor">#F1F2F4</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/theme</color>
+    <color name="colorControlNormal">@color/black</color>
+
+    <!-- 红点标记颜色 -->
+    <color name="badge_color">#E7634C</color>
+    <color name="body">#F7F7F7</color>
+    <color name="line">#FFF7F7F7</color>
+    <color name="base_hint_color">#808080</color>
+
+
+    <!--MessageBox-->
+    <color name="message_box_background">@color/white</color>
+    <color name="message_box_title">#666666</color>
+    <color name="message_box_version">#CCCCCC</color>
+    <color name="message_box_content">#666666</color>
+
+    <!--常用字体颜色-->
+    <color name="base_text_color">#2b2b2b</color>
+    <color name="base_text_color_hint">#666666</color>
+
+    <!--Text color-->
+    <color name="text">#333333</color>
+    <color name="text_hint">#CCCCCC</color>
+    <color name="text_sub">#AAAAAA</color>
+    <color name="text_sub_dark">#999999</color>
+    <color name="text_focuse">#FF1474E4</color>
+    <color name="text_houser_show">#BFBFBF</color>
+    <color name="text_red">#F90808</color>
+    <color name="text_show_tost">#BBBBBB</color>
+
+
+    <!--详情页面标题颜色-->
+    <color name="cell_title">#333333</color>
+    <color name="cell_sub">#AAAAAA</color>
+
+    <!-- 价格颜色 -->
+    <color name="price_color">#F90808</color>
+
+    <!--浅灰色按钮颜色-->
+    <color name="btn_light_gray">#FFE6E6E6</color>
+    <color name="btn_light_gray_down">#FFCACACA</color>
+
+    <!--时间选择器-->
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <color name="timepicker_toolbar_bg">#e60012</color>
+
+    <!--线条颜色-->
+    <color name="base_samll_color">#FFF7F7F7</color>
+    <color name="base_middle_color">#FFF7F7F7</color>
+    <color name="base_big_color">#FFF7F7F7</color>
+
+    <!--筛选组件-->
+    <color name="filter_text_hint_color">#BFBFBF</color>
+
+    <!--房源标签的背景颜色-->
+    <color name="base_house_tag_bg_color">#F3F8FD</color>
+
+    <color name="contas_tag_clolor">#151515</color>
+    <color name="contas_tag_blue_clolor">#1474E4</color>
+
+<!--    按钮默认颜色-->
+    <color name="btn_default_color">#F1F2F4</color>
+
+
+    <color name="my_editext_bg_color">#F1F2F4</color>
+
+    <color name="line_colors">#F1F2F4</color>
+</resources>

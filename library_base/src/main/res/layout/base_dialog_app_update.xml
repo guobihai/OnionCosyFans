@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="400dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="@dimen/base_font_size_20"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text"
+        android:text="@string/app_version_name"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_context"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/base_font_size_13"
+        android:padding="10dp"
+        android:gravity="left"
+        android:textColor="@color/text"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="@string/app_version_name"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/base_padding"
+        android:paddingRight="@dimen/base_padding"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/base_font_size_13"
+            android:textColor="@color/text_sub"
+            android:text="@string/app_verions_index"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:src="@mipmap/icon_stary"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_2"
+            android:src="@mipmap/icon_stary"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_3"
+            android:src="@mipmap/icon_stary"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/img_4"
+            android:src="@mipmap/icon_stary"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/img_5"
+            android:src="@mipmap/icon_stary"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/base_font_size_13"
+                android:textColor="@color/text_sub"
+                android:text="@string/app_verions"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/base_font_size_13"
+                android:textColor="@color/text_sub"
+                android:text="V1.1.1"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+
+        <com.deadline.statebutton.StateButton
+            android:layout_above="@+id/tv_buttom"
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/app_update"
+            android:textSize="@dimen/base_font_size_15"
+            app:normalBackgroundColor="@color/bluce"
+            app:normalTextColor="@color/white"
+            app:pressedBackgroundColor="@color/bluce"
+            app:pressedTextColor="@color/white"
+            app:radius="100dp"
+            app:unableBackgroundColor="@color/bluce"
+            app:unableTextColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

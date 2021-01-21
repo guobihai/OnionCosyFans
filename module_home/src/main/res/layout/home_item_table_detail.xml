@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_item_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="218dp"
+        android:scaleType="center"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/home_item_detail"
+        />
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_item_logon"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="218dp"
+        android:scaleType="center"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/item_detail_no_sku"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/img_item_icon"
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_buttom"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateIds">
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/img_item_icon"
+        android:text="xperience Nipples 6 Months"
+        android:textColor="@color/text"
+        android:gravity="left"
+        android:maxLines="2"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/base_font_size_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_disc"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/layout_buttom"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_discc_monery1"
+            android:text="RM16 off"
+            android:background="@drawable/home_item_special_shaper_two"
+            android:textSize="@dimen/base_font_size_12"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_discc_monery1"
+            android:id="@+id/tv_discc_monery2"
+            android:text="RM169.4 off"
+            android:background="@drawable/home_item_special_shaper_two"
+            android:textSize="@dimen/base_font_size_12"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layout_buttom"
+        android:paddingLeft="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_monery"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/layout_item"
+        android:text="RM169.4"
+        android:textColor="@color/bluce"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/base_font_size_14"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_monery2"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_monery"
+        android:text="RM169.4"
+        android:textColor="@color/text_sub_dark"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/base_font_size_12"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

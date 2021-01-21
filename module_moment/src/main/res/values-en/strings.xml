@@ -1,0 +1,22 @@
+<resources>
+    <string name="moment_app_name">module_moment</string>
+    <string name="moment_search">search</string>
+
+
+    <string name="moment_btn_post">Post</string>
+    <string name="moment_show_more">Show More</string>
+
+    <string name="moment_no_data">No post～</string>
+
+    <string name="moment_tv_delete">delete</string>
+    <string name="moment_tv_save">Save</string>
+    <string name="moment_tv_share">Share</string>
+
+    <string name="moment_tv_see_other">View others</string>
+
+    <string-array name="moment_tab_array">
+        <item>Post Center</item>
+        <item>Popular</item>
+        <item>Offcial</item>
+    </string-array>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="advertsix"
+            type="cc.onion.cosyfans.home.viewmodel.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_six_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/home_advert_two"
+            android:scaleType="centerCrop"
+            android:layout_height="112dp"/>
+
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_six_2"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_advert_two"
+            android:scaleType="centerCrop"
+            android:layout_height="112dp"/>
+        <ImageView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_advert_six_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/home_advert_two"
+            android:scaleType="centerCrop"
+            android:layout_height="112dp"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/home_advert_six_4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/home_advert_two"
+                android:scaleType="centerCrop"
+                android:layout_height="112dp"/>
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/home_advert_six_5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/home_advert_two"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:layout_height="112dp"/>
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/home_advert_six_6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/home_advert_two"
+                android:scaleType="centerCrop"
+                android:layout_height="112dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</layout>

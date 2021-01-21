@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:background="@drawable/passport_conpon_bg_shape"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passport_choose_intel_number"
+            android:textColor="@color/text"
+            android:padding="15dp"
+            android:textSize="@dimen/base_font_size_16" />
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_cancle"
+            android:paddingRight="15dp"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/layout_country_1"
+        android:paddingLeft="@dimen/base_padding"
+        android:paddingRight="@dimen/base_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            android:id="@+id/layout_left"
+            style="@style/PassportRowStyle">
+
+
+            <ImageView
+                android:src="@mipmap/icon_malaysia"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                style="@style/PassportNoticeText"
+                android:text="0060"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/text_sub_dark"
+                android:textSize="@dimen/base_font_size_13"
+                />
+
+
+
+
+            <TextView
+                style="@style/PassportNoticeText"
+                android:text="Malaysia"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14"
+                />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_right"
+            android:paddingRight="10dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_country_2"
+        android:paddingLeft="@dimen/base_padding"
+        android:paddingRight="@dimen/base_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            style="@style/PassportRowStyle">
+
+
+            <ImageView
+                android:src="@mipmap/icon_malaysia"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                style="@style/PassportNoticeText"
+                android:text="0086"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/text_sub_dark"
+                android:textSize="@dimen/base_font_size_13"
+                />
+
+
+
+
+            <TextView
+                style="@style/PassportNoticeText"
+                android:text="中国"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_14"
+                />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_right"
+            android:paddingRight="10dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+</LinearLayout>

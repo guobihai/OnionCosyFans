@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        
+        <variable
+            name="buttomViewModel"
+            type="cc.onion.cosyfans.item.viewModel.DetailAndroidViewModel" />
+
+        <import type="android.view.View"/>
+
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <View
+
+            style="@style/BaseAppLineStyle"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:onClick="@{v->buttomViewModel.toHomeClick()}"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="10dp"
+            android:padding="0dp"
+            android:drawableTop="@mipmap/icon_home"
+            style="@style/ItemDetailTextStyle"
+            android:textSize="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_gravity="center"
+           android:text="@string/item_home"
+            />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="10dp"
+            android:padding="0dp"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/dp_10"
+            android:gravity="center"
+            android:onClick="@{v->buttomViewModel.toCartClick()}"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/icon_cart"
+            style="@style/ItemDetailTextStyle"
+            android:text="@string/item_cart"
+            />
+
+
+       <RelativeLayout
+           android:visibility="@{buttomViewModel.isShowWSale?View.VISIBLE:View.INVISIBLE}"
+           android:onClick="@{v->buttomViewModel.SaleingClick()}"
+           android:layout_width="0dp"
+           android:layout_weight="3"
+           android:background="@color/text"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/tv_sall"
+               android:layout_centerHorizontal="true"
+               style="@style/ItemDetailTextStyle"
+               android:background="@color/text"
+               android:paddingBottom="0dp"
+               android:textColor="@color/white"
+               android:text="@string/item_sale"
+               />
+
+           <TextView
+               android:id="@+id/tv_item_sale"
+               android:layout_below="@+id/tv_sall"
+               android:layout_centerHorizontal="true"
+               android:padding="0dp"
+               style="@style/ItemDetailTextStyle"
+               android:background="@color/text"
+               android:textColor="@color/white"
+               android:textSize="@dimen/base_font_size_11"
+               android:text="(销售可得RM200)"
+               />
+       </RelativeLayout>
+
+        <TextView
+            android:onClick="@{v->buttomViewModel.toAddCart()}"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            style="@style/ItemDetailTextStyle"
+            android:textColor="@color/white"
+            android:background="@color/bluce"
+            android:text="@string/item_add_cart"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

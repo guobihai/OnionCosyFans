@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_conpon_bg_shape"
+    android:orientation="vertical"
+    android:maxHeight="800dp"
+    android:layout_height="450dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_voucher"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:padding="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/base_font_size_16" />
+
+        <ImageView
+            android:id="@+id/img_cancle"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_cancle"
+            android:paddingRight="15dp"
+           android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_coupon_no_data"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_context"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/text"
+        android:padding="20dp"
+        android:layout_gravity="left"
+        android:text="@string/item_more_vounchers"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_unUse_recyclerview"
+        android:background="@color/base_bg"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/text"
+        android:padding="20dp"
+        android:layout_gravity="left"
+        android:text="@string/item_more_vounchers"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_conpon_recyclerview"
+        android:background="@color/base_bg"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

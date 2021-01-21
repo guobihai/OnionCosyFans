@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:id="@+id/layout_item"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:src="@mipmap/home_item_detail"
+        android:scaleType="fitCenter"
+        android:layout_width="40dp"
+        android:layout_centerVertical="true"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_icon"
+        android:id="@+id/tv_play_name"
+        android:text="ddd"
+        android:layout_below="@+id/tv_childen_title"
+        style="@style/TradeBaseTextStyle"
+        />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_right"
+        android:scaleType="center"
+        android:layout_width="40dp"
+        android:layout_centerVertical="true"
+        android:layout_height="40dp"/>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/BaseAppLineStyle"
+
+        />
+</LinearLayout>

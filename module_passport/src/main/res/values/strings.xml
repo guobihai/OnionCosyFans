@@ -1,0 +1,43 @@
+<resources>
+    <string name="passport_login">登录</string>
+    <string name="passport_account_login">会员登录</string>
+    <string name="passport_reigist">注册</string>
+    <string name="passport_next">下一步</string>
+    <string name="passport_quick">快速登录</string>
+    <string name="passport_tips">登录即代表您同意</string>
+    <string name="passport_forget">忘记密码</string>
+    <string name="passport_welcome">欢迎</string>
+    <string name="passport_invitation_code">邀请码</string>
+    <string name="passport_user_name">用户名</string>
+    <string name="passport_mobile"> 手机号码</string>
+    <string name="passport_get_code">获取验证码</string>
+    <string name="passport_code">验证码</string>
+    <string name="passport_send_msg_code">我们会给你发一个短信验证码</string>
+    <string name="passport_verification_code">验证码</string>
+    <string name="passport_password">密码</string>
+    <string name="passport_password_quick">确认密码</string>
+    <string name="passport_password_repeat">再次输入密码</string>
+    <string name="passport_password_tips">密码由6-20位字母、数字、特殊符号组成</string>
+    <string name="passport_password_agein">我同意</string>
+    <string name="passport_password_user_agreement">《用户协议》</string>
+    <string name="passport_choose_intel_number">选择国际电话区号</string>
+    <string name="passport_email_1">邮箱</string>
+    <string name="passport_email_2">邮箱？</string>
+    <string name="passport_mobile_2">手机号码？</string>
+    <string name="passport_reset_password">重置密码</string>
+    <string name="passport_reset">重置</string>
+    <string name="passport_me_agree">我同意</string>
+    <string name="passport_user_agreement">《用户协议》</string>
+    <string name="passport_google_login">Google 登录</string>
+    <string name="passport_facebook_login">FaceBook 登录</string>
+    <string name="passport_authorization_yes">确认授权</string>
+
+    <string name="passport_authorization_no">暂不授权</string>
+
+
+
+
+
+
+
+</resources>

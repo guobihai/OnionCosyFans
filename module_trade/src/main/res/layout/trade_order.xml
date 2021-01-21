@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="cc.onion.cosyfans.module_trade.TradeAndroidViewModel" />
+        <import type="android.view.View"/>
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/body"
+    android:layout_height="match_parent"
+    android:background="@color/baseBodyColor"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/base_margin"
+    android:layout_marginRight="@dimen/base_margin"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/cart_item_bg_shape"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:visibility="@{viewModel.isShowAddress?View.VISIBLE:View.GONE}"
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:onClick="@{v->viewModel.addAdddress()}"
+                    android:id="@+id/layout_top"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/img_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/icon_address"
+                        />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/tv_name1"
+                        android:layout_toRightOf="@+id/img_select"
+                        android:text="@={viewModel.name}"
+                        style="@style/TradeBaseTextStyle"
+                        />
+
+
+                    <TextView
+                        android:layout_toEndOf="@+id/tv_name1"
+                        android:id="@+id/tv_number"
+                        android:text="@={viewModel.mobile}"
+                        style="@style/TradeBaseTextStyle"
+                        />
+
+
+
+
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_right_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:onClick="@{v->viewModel.addAdddress()}"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingTop="0dp"
+                        android:id="@+id/tv_address"
+                        android:text="@={viewModel.address}"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        style="@style/TradeBaseTextStyle"/>
+                </LinearLayout>
+            </LinearLayout>
+<!--            android:visibility="@{viewModel.isShowNullData?View.VISIBLE:View.GONE}"-->
+            <TextView
+               android:visibility="gone"
+                android:id="@+id/tv_null_address"
+                android:onClick="@{v->viewModel.addAdddress()}"
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:minHeight="96dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/trade_address"
+                />
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_address_line"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/cart_item_bg_shape"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/cart_item_bg_shape"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_cash_coupons"
+                />
+
+            <TextView
+                android:onClick="@{v->viewModel.openCasch()}"
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@={viewModel.cashPrice}"
+                android:drawableRight="@mipmap/icon_right"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_coupon"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_available"
+                android:drawableRight="@mipmap/icon_right"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/cart_item_bg_shape"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_Order_subtotal"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@={viewModel.commodityAmount}"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_Promotion_discount"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@={viewModel.totalDiscountPrice}"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_cash_coupons"
+                />
+
+            <TextView
+                style="@style/TradeBaseTextStyle"
+                android:layout_alignParentRight="true"
+                android:text="@={viewModel.cashPrice1}" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_coupon"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@={viewModel.totalVoucherPrice}"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@string/trade_freight"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                style="@style/TradeBaseTextStyle"
+                android:text="@={viewModel.freight}"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp">
+
+
+
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:text="@={viewModel.totalMonery}"
+            android:textColor="@color/bluce"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:onClick="@{v->viewModel.commitOrder()}"
+            android:id="@+id/tv_checkout"
+            android:layout_alignParentRight="true"
+            android:background="@color/bluce"
+            android:textSize="@dimen/base_font_size_13"
+            android:text="@string/trade_commit_order"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="130dp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+</layout>

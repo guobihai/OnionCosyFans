@@ -1,0 +1,44 @@
+apply from: "../module.build.gradle" // 通用的部分共用一个配置
+
+android {
+
+    defaultConfig {
+        // 如果是独立模块，则使用当前组件的包名
+        if (isBuildModule.toBoolean()) {
+            applicationId "cc.onion.cosyfans"
+        }
+
+        // 统一资源前缀，规范资源引用
+        resourcePrefix "trade_"
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 组件依赖基础库(这里要用api依赖, 不能用implementation，不然当宿主打包的时候自动生成的databinding无法编译该库的类)
+    api project(':library_base')
+    //购物车
+    api project(':module_cart')
+
+    implementation files('libs/testfairy-sdk.jar')
+    implementation(name: 'ipay_hosted_standard_sdk_20180830', ext: 'aar')
+//    implementation(name: 'Ipay_hosted_standard_SDK_13062019', ext: 'aar')
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
+
+    // 组件中依赖阿里路由编译框架
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+
+}

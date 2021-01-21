@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="cart_recommend">--为您推荐--</string>
+    <!--    //购物车-->
+    <string name="cart_tost">你的购物车是空的</string>
+    <string name="cart_go_shopping">去购物</string>
+    <string name="cart_title">My Cart</string>
+    <string name="cart_like">--猜你喜欢--</string>
+    <string name="cart_total">总价：</string>
+    <string name="cart_disc">已优惠：</string>
+    <string name="cart_checkout">结算</string>
+    <string name="cart_go_checkout">回购物车</string>
+    <string name="cart_vour">优惠券</string>
+    <string name="cart_ok">确认</string>
+    <string name="cart_ok_2">确定</string>
+</resources>

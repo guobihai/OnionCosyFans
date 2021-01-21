@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable
+            name="model"
+            type="cc.onion.cosyfans.my.PerssonalCenterViewModel" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="50dp"
+        android:paddingBottom="20dp"
+        android:scrollbars="vertical"
+        android:id="@+id/body"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/line"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:background="@color/bluce"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/img_icon"
+                        android:paddingLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:src="@mipmap/icon_my_9"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@+id/img_icon"
+                        android:text="@={model.dataBeanObservableField.name}"
+                        style="@style/MyTextStyle"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/base_font_size_16"
+                        android:textColor="@color/white"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/layout_icon"
+                     style="@style/MyLayoutStyle"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:onClick="@{v->model.toUnpaid()}"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="@={model.unpaid}"
+                            style="@style/MyOrderTextStyle"
+                            android:paddingBottom="0dp"
+                            />
+                        <TextView
+                            android:text="@string/order_with_payment"
+                            style="@style/MyOrderTextStyle"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:onClick="@{v->model.delivering()}"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="@={model.delivering}"
+                            style="@style/MyOrderTextStyle"
+                            android:paddingBottom="0dp"
+                            />
+                        <TextView
+                            android:text="@string/order_with_Receipt"
+                            style="@style/MyOrderTextStyle"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:onClick="@{v->model.afterSale()}"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="@={model.afterSale}"
+                            style="@style/MyOrderTextStyle"
+                            android:paddingBottom="0dp"
+                            />
+                        <TextView
+                            android:text="@string/order_after_Sale_1"
+                            style="@style/MyOrderTextStyle"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <ImageView
+                    android:id="@+id/img_logon"
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/home_advert_one"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/item_my_bg_shape"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                style="@style/MyLayoutStyle"
+                >
+
+        <RelativeLayout
+            android:onClick="@{v->model.toOrder()}"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="全部订单"
+                style="@style/MyTextStyle"
+                android:drawableLeft="@mipmap/icon_my_02"
+                />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/base_margin"
+                android:src="@mipmap/icon_right_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <View
+         style="@style/MyLineStyle"
+            />
+
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="收获地址"
+                style="@style/MyTextStyle"
+                android:onClick="@{v->model.toAddressList()}"
+                android:drawableLeft="@mipmap/mine_address"
+                />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/base_margin"
+                android:src="@mipmap/icon_right_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/MyLineStyle"
+            />
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="我的优惠券"
+                style="@style/MyTextStyle"
+                android:drawableLeft="@mipmap/mine_copun"
+                />
+
+
+
+            <TextView
+                android:text="@={model.couponCount}"
+                style="@style/MyTextStyle"
+                android:drawableRight="@mipmap/icon_right_down"
+                android:layout_alignParentRight="true"
+                />
+
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/MyLineStyle"
+            />
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="成为 Cosy Discoveries"
+                        style="@style/MyTextStyle"
+                        android:drawableLeft="@mipmap/mine_cd"
+                        />
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/base_margin"
+                        android:src="@mipmap/icon_right_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MyLineStyle"
+                    />
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="成为 Cosy Parther"
+                        style="@style/MyTextStyle"
+                        android:drawableLeft="@mipmap/mine_cp"
+                        android:drawablePadding="15dp"
+                        />
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/base_margin"
+                        android:src="@mipmap/icon_right_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MyLineStyle"
+                    />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            style="@style/MyLayoutStyle"
+            >
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="应用语言"
+                    style="@style/MyTextStyle"
+                    android:drawableLeft="@mipmap/icon_my_01"
+                    />
+
+                <TextView
+                    android:text="@={model.lanageType}"
+                    style="@style/MyTextStyle"
+                    android:drawableRight="@mipmap/icon_right_down"
+                    android:drawableLeft="@mipmap/icon_my_01"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/MyLineStyle"
+                />
+
+
+            <RelativeLayout
+                android:onClick="@{v->model.toSetting()}"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="设置"
+                    style="@style/MyTextStyle"
+                    android:drawableLeft="@mipmap/mine_setting"
+                    />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/base_margin"
+                    android:src="@mipmap/icon_right_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/MyLineStyle"
+                />
+
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:onClick="@{v->model.tohelper()}"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="帮助中心"
+                    style="@style/MyTextStyle"
+                    android:drawableLeft="@mipmap/mine_help"
+                    />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/base_margin"
+                    android:src="@mipmap/icon_right_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</layout>
